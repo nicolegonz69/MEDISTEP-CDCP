@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDISTEP</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Colors */
+        :root {
+            --turquoise: #009999;
+            --white: #ffffff;
+        }
+        
+        /* Main Header */
+        header {
+            background-color: var(--turquoise);
+            color: var(--white);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            background-image: url('imagenes/img_7.jpg');
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--white);
+            margin-right: 1rem;
+            background-size: contain; /* Ajusta la imagen para que se vea completa dentro del contenedor */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+
+        header nav a {
+            color: var(--white);
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Banner Section */
+        .banner {
+            background-image: url('imagenes/img_5.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .banner button {
+            background-color: var(--turquoise);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        /* Separators */
+        .section-title {
+            background-color: var(--turquoise);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Services Section */
+        .services {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .services p {
+            margin-bottom: 2rem;
+            color: var(--turquoise);
+        }
+
+        .services .bot-card {
+            display: inline-block;
+            text-align: center;
+            margin: 0 1rem;
+        }
+
+        .bot-card img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--turquoise);
+            border-radius: 50%;
+        }
+
+        .bot-card button {
+            background-color: var(--turquoise);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            cursor: pointer;
+        }
+
+        /* Resources Section */
+        .resources {
+            background-image: url('imagenes/img_6.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .resources .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .resources button {
+            background-color: var(--turquoise);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Library Section */
+        .library, .flashcards, .questions {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .library {
+            background-image: url('imagenes/img_4.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .library .box-container, .flashcards .box-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: var(--white);
+            border: 2px solid var(--turquoise);
+            border-radius: 5px;
+        }
+        .flashcards {
+            background-image: url('imagenes/img_1.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .flashcards .text-box {
+            width: 200px;
+            height: 100px;
+            background-color: var(--white);
+            border: 2px solid var(--turquoise);
+            border-radius: 5px;
+            text-align: left;
+            padding: 0.5rem;
+        }
+
+        /* Questions Section */
+        .questions input[type="text"] {
+            width: 80%;
+            padding: 0.5rem;
+            margin-top: 1rem;
+            border: 1px solid var(--turquoise);
+            border-radius: 5px;
+        }
+        .questions {
+            background-image: url('imagenes/img_3.jpg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .questions button {
+            background-color: var(--turquoise);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--turquoise);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .resources .buttons, .library .box-container, .flashcards .box-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"></div>
+        <div><strong>MEDISTEP</strong></div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">WARA</a>
+            <a href="#">GEA</a>
+            <a href="siteweb\web_aux.html">Diagnóstico</a>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <h1>Texto de introducción</h1>
+        <button>Chatear con WARA</button>
+    </section>
+
+    <!-- Services Section -->
+    <div class="section-title">Otros servicios</div>
+    <section class="services">
+        <p>WARA y Bot2 son inteligencias artificiales creadas para ayudar a estudiantes de Medicina.</p>
+        <div class="bot-card">
+            <img src="imagenes\img_9.jpg" alt="Imagen WARA"> <!-- Resaltar para imagen -->
+            <button>Chatear con WARA</button>
+        </div>
+        <div class="bot-card">
+            <img src="imagenes\img_8.jpg" alt="Imagen Bot2"> <!-- Resaltar para imagen -->
+            <button>Chatear con Bot2</button>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <div class="section-title">Recursos y enlaces importantes</div>
+    <section class="resources">
+        <div class="buttons">
+            <button>Biblioteca</button>
+            <button>Flashcards</button>
+            <button>Banco de Preguntas</button>
+        </div>
+    </section>
+
+    <!-- Library Section -->
+    <div class="section-title">Sección Biblioteca</div>
+    <section class="library">
+        <div class="box-container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </section>
+
+    <!-- Flashcards Section -->
+    <div class="section-title">Sección de FlashCards</div>
+    <section class="flashcards">
+        <div class="box-container">
+            <div class="text-box"><input type="text" placeholder="Texto"></div>
+            <div class="box"></div>
+        </div>
+    </section>
+
+    <!-- Questions Section -->
+    <div class="section-title">Sección de Preguntas</div>
+    <section class="questions">
+        <input type="text" placeholder="Escriba su consulta">
+        <button>Diagnósticate</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <footer>
+        <h4>WebMaster: Yujra Calle Luz Valentina</h4>
+        <h4>Derechos de autor ©️ 2024. Todos los derechos reservados.</h4>
+        <h4>Confidencialidad: Esta información es privada y confidencial.</h4>
+    </footer>
+</body>
+</html>

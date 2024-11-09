@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDOMENT - Diagnóstico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F4F4F4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #009999; 
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .title-section {
+            background-color: #F4F4F4;
+            border: 2px solid #39CCCC;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        .title-section h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .title-section .circle {
+            border: 2px solid #39CCCC;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .separator {
+            background-color: #009999;
+            color: white;
+            padding: 10px;
+            margin: 30px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .parameter-section {
+            background-image: url('imagenes/img_2.jpg'); /* Cambiar a la imagen de fondo */
+            background-size: cover;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        .parameter-fields {
+            text-align: left;
+            max-width: 60%;
+        }
+        .parameter-fields label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .parameter-fields input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+        }
+        .parameter-description {
+            max-width: 35%;
+            text-align: left;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        .diagnose-button {
+            background-color: white;
+            color: #39CCCC;
+            border: 2px solid #39CCCC;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .diagnose-button:hover {
+            background-color: #39CCCC;
+            color: white;
+        }
+        .info-box {
+            background-color: #E0E0E0;
+            border: 2px solid #39CCCC;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        footer {
+            background-color: #009999; 
+            padding: 20px;
+            color: #D4F4F7;
+            text-align: center;
+        }
+        footer h2 {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="imagenes\img_7.jpg" alt="Logo EDOMENT"> <!-- Inserta aquí el logo de EDOMENT -->
+    <h1>MEDISTEP</h1>
+    <nav>
+        <a href="..\index.html">Inicio</a>
+        <a href="#">Wara</a>
+        <a href="#">Gea</a>
+        <a href="siteweb\web_aux.html">Diagnóstico</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="title-section">
+        <h2>Tipos de Cáncer</h2>
+        <div class="circle"></div>
+    </div>
+
+    <div class="separator">Parámetros</div>
+
+    <div class="parameter-section">
+        <div class="parameter-fields">
+            <label for="age">Edad:</label>
+            <input type="text" id="age" name="age">
+            
+            <label for="gender">Género:</label>
+            <input type="text" id="gender" name="gender">
+            
+            <label for="symptoms">Síntomas:</label>
+            <input type="text" id="symptoms" name="symptoms">
+            
+            <label for="history">Historial Médico:</label>
+            <input type="text" id="history" name="history">
+        </div>
+        <div class="parameter-description">
+            <p>Estos parámetros ayudarán a un mejor resultado para tu diagnóstico.</p>
+        </div>
+    </div>
+
+    <button class="diagnose-button">Ver Diagnóstico</button>
+
+    <div class="info-box">
+        <p>Esta sección muestra un análisis detallado y resultados previos al diagnóstico final.</p>
+    </div>
+</div>
+
+<footer>
+    <h2>WebMaster: Yujra Calle Luz Valentina</h2>
+    <h2>Derechos de autor ©️ 2024. Todos los derechos reservados.</h2>
+    <h2>Confidencialidad: Esta información es privada y confidencial.</h2>
+</footer>
+
+</body>
+</html>
